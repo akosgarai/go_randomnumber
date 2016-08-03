@@ -7,6 +7,10 @@ import (
 )
 
 func main() {
+    fmt.Println("String:", random(10))
+}
+
+func random (x int) int {
     rand.Seed(time.Now().UTC().UnixNano())
-    fmt.Println("String:", rand.Intn(10))
+    return rand.Intn(x)
 }
